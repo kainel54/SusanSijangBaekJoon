@@ -6,7 +6,7 @@ namespace SusanSijangBaekJoon
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
