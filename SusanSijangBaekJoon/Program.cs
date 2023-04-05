@@ -6,17 +6,16 @@ namespace SusanSijangBaekJoon
     {
         static void Main(string[] args)
         {
-            string input = Console.ReadLine();
-            bool isPalindrome = true;
-            for (int i = 0; i < input.Length / 2; i++)
+            int n = int.Parse(Console.ReadLine());
+            string[] input = Console.ReadLine().Split();
+            int[] divisors = new int[n];
+            for (int i = 0; i < n; i++)
             {
-                if (input[i] != input[input.Length - 1 - i])
-                {
-                    isPalindrome = false;
-                    break;
-                }
+                divisors[i] = int.Parse(input[i]);
             }
-            Console.WriteLine(isPalindrome ? "1" : "0");
+            Array.Sort(divisors);
+            int result = divisors[0] * divisors[n - 1];
+            Console.WriteLine(result);
         }
     }
 }
