@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Text;
+using System.Numerics;
 
 namespace SusanSijangBaekJoon
 {
-    class MainClass
+    class Program
     {
         static void Main(string[] args)
         {
-            int t = int.Parse(Console.ReadLine());
-            StringBuilder sb = new StringBuilder();
-
-            for (int i = 1; i <= t; i++)
-            {
-                sb.AppendLine(i.ToString());
-            }
-            Console.WriteLine(sb.ToString());
+            string str = Console.ReadLine();
+            string [] spt = str.Split(' ');
+            BigInteger idx1 = BigInteger.Parse(spt[0]);
+            BigInteger idx2 = BigInteger.Parse(spt[1]);
+            Console.WriteLine(idx1 + idx2);
         }
     }
 }
