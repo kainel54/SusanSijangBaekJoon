@@ -6,15 +6,15 @@ namespace SusanSijangBaekJoon
     {
         static void Main(string[] args)
         {
-            int a = int.Parse(Console.ReadLine());
-            int b = 1;
-            for (int i = 0; i < a; i++)
+            string [] a = Console.ReadLine().Split();
+            int b = 0;
+            int c = 0;
+            for(int i= 0;i<a.Length;i++)
             {
-                b *= (a - i);                
+                b += int.Parse(a[i]) * int.Parse(a[i]);
+                c = b % 10;
             }
-            Console.WriteLine(b);
-            
-            
+            Console.WriteLine(c);
 
         }
     }
