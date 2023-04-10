@@ -6,16 +6,13 @@ namespace SusanSijangBaekJoon
     {
         static void Main(string[] args)
         {
-            string [] a = Console.ReadLine().Split();
-            int b = 0;
-            int c = 0;
-            for(int i= 0;i<a.Length;i++)
-            {
-                b += int.Parse(a[i]) * int.Parse(a[i]);
-                c = b % 10;
-            }
-            Console.WriteLine(c);
-
+            string[] colors = { "black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white" };
+            string color1 = Console.ReadLine();
+            string color2 = Console.ReadLine();
+            string color3 = Console.ReadLine();
+            long value = (Array.IndexOf(colors, color1) * 10 + Array.IndexOf(colors, color2)) * (long)Math.Pow(10, Array.IndexOf(colors, color3));
+            Console.WriteLine(value);
         }
     }
+
 }
