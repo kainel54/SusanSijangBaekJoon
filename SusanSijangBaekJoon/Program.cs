@@ -6,21 +6,11 @@ namespace SusanSijangBaekJoon
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
+            string[] a = Console.ReadLine().Split();
+            long n = long.Parse(a[0]);
+            long m = long.Parse(a[1]);
 
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = n - 1; j > i; j--)
-                {
-                    Console.Write(" ");
-                }
-                for (int k = 0; k < 2 * i + 1; k++)
-                {
-                    Console.Write("*");
-                }
-                Console.WriteLine();
-            }
+            Console.WriteLine(Math.Abs(n-m));
         }
     }
-
 }
