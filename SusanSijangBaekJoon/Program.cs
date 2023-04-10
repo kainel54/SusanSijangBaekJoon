@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace SusanSijangBaekJoon
 {
@@ -6,11 +7,14 @@ namespace SusanSijangBaekJoon
     {
         static void Main(string[] args)
         {
-            string[] a = Console.ReadLine().Split();
-            long n = long.Parse(a[0]);
-            long m = long.Parse(a[1]);
+            int t = int.Parse(Console.ReadLine());
+            StringBuilder sb = new StringBuilder();
 
-            Console.WriteLine(Math.Abs(n-m));
+            for (int i = 1; i <= t; i++)
+            {
+                sb.AppendLine(i.ToString());
+            }
+            Console.WriteLine(sb.ToString());
         }
     }
 }
